@@ -1,15 +1,22 @@
-import { Text, View } from "react-native";
+import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import { Card } from 'react-native-paper';
+import Profile from './components/Profile';
+import Contacts from './components/Contacts';
 
-export default function Index() {
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Profile />
+      <Contacts />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    padding: 8,
+  },
+});
